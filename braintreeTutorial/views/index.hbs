@@ -1,0 +1,40 @@
+<div id="dropin-wrapper">
+  <div id="checkout-message"></div>
+  <div id="dropin-container"></div>
+  <button id="submit-button">Submit payment</button>
+</div>
+<script>
+  var button = document.querySelector('#submit-button');
+
+  braintree.dropin.create({
+    // Inserta tu clave de tokenización aquí
+    authorization: '<tu_clave_de_tokenización>',
+    container: '#dropin-container'
+  }, function (createErr, instance) {
+    button.addEventListener('click', function () {
+      instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
+        $.ajax({
+          type: 'POST',
+          url: '/checkout',
+          data: {'paymentMethodNonce': payload.nonce}
+        }).done(function(result) {
+          instance.teardown(function (teardownErr) {
+            if (teardownErr) {
+              console.error('¡No se pudo desmontar la interfaz de pago!');
+            } else {
+              console.info('¡La interfaz de pago ha sido desmontada!');
+              $('#submit-button').remove();
+            }
+          });
+
+          if (result.success) {
+            $('#checkout-message').html('<h1>Éxito</h1><p>Tu UI Drop-in funciona. ¡Verifica tu <a href="https://sandbox.braintreegateway.com/login">Panel de control de sandbox</a> para ver las transacciones de prueba!</p><p>Refresca para intentar otra transacción.</p>');
+          } else {
+            console.log(result);
+            $('#checkout-message').html('<h1>Error</h1><p>Revisa la consola.</p>');
+          }
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000; /* Cambia el color del texto a negro */
+  background-image: url("https://www.todofondos.net/wp-content/uploads/1600x695-Ralph-y-Vanellope-se-destrozan-el-papel-tapiz-Ralph.-Fondo-de-pantalla-1024x445.jpg");
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para la sección hero */
+.hero {
+  padding: 100px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Cambia el fondo a blanco con opacidad */
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+.hero-content {
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+.hero p {
+  font-size: 18px;
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+/* Estilos para la sección features */
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.feature {
+  flex-basis: 30%;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Cambia el fondo a blanco con opacidad */
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+.feature i {
+  font-size: 36px;
+  color: #000; /* Cambia el color del ícono a negro */
+  margin-bottom: 10px;
+}
+
+.feature h4 {
+  font-size: 20px;
+  color: #000; /* Cambia el color del texto a negro */
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-buttons a {
+  margin-right: 10px;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color:blue;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}

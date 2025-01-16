@@ -1,0 +1,15 @@
+<div class="noticias-container">
+    <h2 class="titulo-noticias">Noticias</h2>
+  
+  
+    <!-- Barra de búsqueda -->
+  
+    <ul class="noticias-grid">
+      <li *ngFor="let noticia of noticias" class="noticia-item">
+        <h3>{{ noticia.title }}</h3>
+        <p>{{ noticia.description }}</p>
+        <a [href]="noticia.url" target="_blank">Leer más</a>
+        <img [src]="noticia.urlToImage" alt="Imagen de la noticia" />
+      </li>
+    </ul>
+  </div>

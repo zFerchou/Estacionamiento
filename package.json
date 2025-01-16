@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
+    "@fullcalendar/angular": "^6.1.10",
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "braintree": "^3.19.0",
+    "mapbox-gl": "^2.15.0"
+  },
+  "devDependencies": {
+    "@types/mapbox-gl": "^2.7.18"
+  }
+}

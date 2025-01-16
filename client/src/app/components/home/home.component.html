@@ -1,0 +1,43 @@
+<div class="main-container">
+  <h3 style="text-align: center;">Autos Nuevos</h3>
+  <hr>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let video of misVideos">
+      <div class="card">
+        <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="...">
+        <div class="card-body d-grid gap-2">
+          <h5 class="card-title">{{video.snippet.title}}</h5>
+          <p class="card-text">{{video.snippet.description}}</p>
+          <button class="btn btn-outline-primary btn-block" (click)="detalleVideo(video.id.videoId)">Ver video</button>
+        </div>
+        <div class="card-footer ">
+          <small class="text-body-secondary">Publicado: {{video.snippet.publishedAt | date}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" #exampleModal tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  [ngClass]="{ 'show': videoId }" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Video youtube -->
+        <iframe width="470" height="440" [src]="videoUrl" title="Video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

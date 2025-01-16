@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;"> <!-- Añadimos altura y centrado vertical -->
+  <div class="hero">
+    <div class="hero-content text-center">
+      <h2 class="text-primary">Inicia sesión</h2>
+      <p>Disfruta de nuestro servicio</p>
+      <a class="nav-link" href="home/crea_cuenta" class="btn btn-info">Clic aquí para crear tu cuenta</a>
+    </div>
+  </div>
+  <div class="login-box bg-secondary text-light p-4" style="border-radius: 10px; width: 300px;"> <!-- Cambiamos el color de fondo y ajustamos el ancho y borde redondeado -->
+    <form class="custom-form" method="post">
+      <div class="form-group">
+        <input type="email" [(ngModel)]="correo" name="email" class="form-control" placeholder="Email" required="required" />
+      </div>
+      <div class="form-group">
+        <input type="password" [(ngModel)]="password1" name="password" class="form-control" placeholder="Password" required="required" />
+      </div>
+      <div class="form-group text-center">
+        <button type="submit" (click)="login()" class="btn btn-success">Ingresar</button>
+      </div>
+      <div class="form-group">
+        <button (click)="onGoogleLogin()" class="btn btn-lg btn-google">Google</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+  

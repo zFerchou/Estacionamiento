@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reloj API</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Reloj API</h1>
+    <div>
+      <h2>Hora y Fecha</h2>
+      <p id="current-time"></p>
+      <p id="current-date"></p>
+    </div>
+    <div>
+      <h2>Configurar Alarma</h2>
+      <input type="time" id="alarm-time">
+      <button onclick="crearAlarma()">Crear Alarma</button>
+    </div>
+    <div>
+      <h2>Alarmas Configuradas</h2>
+      <ul id="alarms-list"></ul>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

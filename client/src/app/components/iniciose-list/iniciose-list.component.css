@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aplicar la imagen de fondo al .container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://www.todofondos.net/wp-content/uploads/1600x695-Ralph-y-Vanellope-se-destrozan-el-papel-tapiz-Ralph.-Fondo-de-pantalla-1024x445.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.8); /* Agrega fondo blanco con opacidad */
+}
+
+/* Estilos para la sección hero-content */
+.hero-content {
+  text-align: right;
+  border-right: 1px solid black;
+  padding-right: 50px;
+  height: 300px;
+  background-color: transparent; /* Cambia el fondo a transparente */
+}
+
+/* Estilos para la sección signup-box */
+.signup-box {
+  flex-grow: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #2c2a2a;
+  border-radius: 5px;
+  margin: 20px;
+  color: #fff;
+}
+
+.signup-box h2 {
+  text-align: center;
+}
+
+/* Estilos para la sección form-group */
+.form-group {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos para el botón de submit */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1f3d80;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #44609e;
+}

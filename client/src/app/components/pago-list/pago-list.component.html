@@ -1,0 +1,31 @@
+<div class="col-md-12">
+  <table class="table">
+    <thead>
+      <tr>
+          <th >ID</th>
+          <th >Concepto</th>
+          <th >Monto</th>
+          <th >Fecha</th>
+          <th >Estatus</th>
+          <th >PayPal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pago of pagos">
+          <td >{{ pago.IDPago }}</td>
+          <td >{{ pago.concepto }}</td>
+          <td >{{ pago.monto }}</td>
+          <td >{{ pago.created_at }}</td>
+          <td >{{ pago.Estatus}}</td>
+          <td>
+              <div class="actions">
+                <a class="btn btn-info" (click)="deletePago(pago.IDPago)" target="_blank">
+                  <i class="fas fa-coins"></i> Pagar
+                </a>
+              </div>
+            </td>
+            
+      </tr>
+    </tbody>
+  </table>
+</div>
